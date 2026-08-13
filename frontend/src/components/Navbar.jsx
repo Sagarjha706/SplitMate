@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import heroLogo from "../assets/hero.png";
 import "../Navbar.css";
 
 const Navbar = () => {
@@ -18,7 +19,7 @@ const Navbar = () => {
                 onClick={() => navigate("/dashboard")}
             >
                 <span className="navbar-logo-icon">
-                    <img className="" height="60" src="/logo.png" alt="Logo" />
+                    <img className="" height="60" src={heroLogo} alt="Logo" />
                 </span>
 
                 <span>SplitMate</span>
