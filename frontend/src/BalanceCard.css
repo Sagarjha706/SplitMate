@@ -1,0 +1,154 @@
+/* =========================
+   BALANCE CARD
+========================= */
+
+.balance-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 16px 18px;
+
+    margin-bottom: 10px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.balance-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 14px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================
+   BALANCE INFO
+========================= */
+
+.balance-info {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 5px;
+
+    color: #374151;
+
+    font-size: 15px;
+}
+
+.balance-info strong {
+    color: #111827;
+
+    font-weight: 600;
+}
+
+.balance-info span {
+    color: #6b7280;
+}
+
+
+/* =========================
+   AMOUNT
+========================= */
+
+.balance-amount {
+    margin-left: 10px;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    background: #fee2e2;
+
+    color: #b91c1c !important;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   SETTLE BUTTON
+========================= */
+
+.settle-btn {
+    flex-shrink: 0;
+
+    border: none;
+
+    background: #16a34a;
+
+    color: white;
+
+    padding: 9px 15px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.settle-btn:hover {
+    background: #15803d;
+
+    transform: translateY(-1px);
+}
+
+.settle-btn:disabled {
+    opacity: 0.7;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .balance-card {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 12px;
+    }
+
+    .balance-info {
+        line-height: 1.6;
+    }
+
+    .balance-amount {
+        margin-left: 0;
+    }
+
+    .settle-btn {
+        width: 100%;
+    }
+
+}

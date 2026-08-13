@@ -1,0 +1,404 @@
+/* =========================
+   EXPENSE CARD
+========================= */
+
+.expense-card {
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    padding: 18px;
+
+    margin-bottom: 12px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.expense-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================
+   EXPENSE HEADER
+========================= */
+
+.expense-card-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 15px;
+}
+
+.expense-info h3 {
+    margin: 0 0 5px;
+
+    color: #111827;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.expense-paid-by {
+    margin: 0;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+.expense-paid-by strong {
+    color: #374151;
+}
+
+
+/* =========================
+   AMOUNT
+========================= */
+
+.expense-amount {
+    color: #111827;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   ACTIONS
+========================= */
+
+.expense-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+.expense-action-btn {
+    width: 36px;
+    height: 36px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    border: 1px solid transparent;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.expense-edit-btn {
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    border-color: #bfdbfe;
+}
+
+.expense-edit-btn:hover {
+    background: #2563eb;
+
+    color: white;
+}
+
+.expense-delete-btn {
+    background: #fef2f2;
+
+    color: #dc2626;
+
+    border-color: #fecaca;
+}
+
+.expense-delete-btn:hover {
+    background: #dc2626;
+
+    color: white;
+}
+
+
+/* =========================
+   SPLIT
+========================= */
+
+.expense-split {
+    margin-top: 15px;
+
+    padding-top: 14px;
+
+    border-top: 1px solid #f0f0f0;
+}
+
+.expense-split-title {
+    margin: 0 0 10px;
+
+    color: #6b7280;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.4px;
+}
+
+.expense-split-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+}
+
+.expense-split-item {
+    background: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+
+    padding: 6px 10px;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+
+    color: #374151;
+}
+
+
+/* =========================
+   EDIT MODE
+========================= */
+
+.expense-edit-card {
+    background: white;
+
+    border: 1px solid #bfdbfe;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    margin-bottom: 12px;
+
+    box-shadow:
+        0 4px 12px rgba(37, 99, 235, 0.08);
+}
+
+.expense-edit-title {
+    margin: 0 0 20px;
+
+    font-size: 20px;
+    font-weight: 600;
+
+    color: #111827;
+}
+
+.expense-edit-form {
+    display: grid;
+
+    gap: 16px;
+}
+
+.expense-form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.expense-form-group label {
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #374151;
+}
+
+.expense-form-input,
+.expense-form-select {
+    width: 100%;
+
+    padding: 10px 12px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    outline: none;
+
+    box-sizing: border-box;
+}
+
+.expense-form-input:focus,
+.expense-form-select:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* =========================
+   SPLIT TYPE
+========================= */
+
+.expense-split-type {
+    display: flex;
+
+    gap: 20px;
+
+    margin-top: 4px;
+}
+
+.expense-radio {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   CUSTOM SPLITS
+========================= */
+
+.expense-custom-split {
+    display: grid;
+
+    gap: 10px;
+}
+
+.expense-custom-user {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.expense-custom-user label {
+    font-size: 13px;
+
+    font-weight: 500;
+
+    color: #4b5563;
+}
+
+
+/* =========================
+   EDIT BUTTONS
+========================= */
+
+.expense-edit-actions {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 4px;
+}
+
+.expense-save-btn {
+    border: none;
+
+    background: #2563eb;
+
+    color: white;
+
+    padding: 9px 16px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.expense-save-btn:hover {
+    background: #1d4ed8;
+}
+
+.expense-cancel-btn {
+    border: 1px solid #d1d5db;
+
+    background: white;
+
+    color: #374151;
+
+    padding: 9px 16px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+.expense-cancel-btn:hover {
+    background: #f3f4f6;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .expense-card-header {
+        flex-direction: column;
+    }
+
+    .expense-actions {
+        width: 100%;
+    }
+
+    .expense-amount {
+        order: -1;
+    }
+
+    .expense-action-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .expense-edit-actions {
+        flex-direction: column;
+    }
+
+    .expense-save-btn,
+    .expense-cancel-btn {
+        width: 100%;
+    }
+
+}
