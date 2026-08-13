@@ -57,7 +57,7 @@ const Signup = () => {
             setLoading(true);
 
             await API.post(
-                "/api/auth/signup",
+                "/auth/signup",
                 {
                     name: name.trim(),
                     email: email.trim(),
