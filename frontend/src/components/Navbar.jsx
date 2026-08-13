@@ -18,7 +18,7 @@ const Navbar = () => {
                 onClick={() => navigate("/dashboard")}
             >
                 <span className="navbar-logo-icon">
-                    <img className="" height="60" src="./logo.png" alt="Logo" />
+                    <img src="/logo.png" alt="Logo" className="navbar-logo-image" />
                 </span>
 
                 <span>SplitMate</span>
