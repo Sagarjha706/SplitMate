@@ -20,7 +20,6 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/ai", aiRoutes);
-app.use("/api/ai", aiRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/groups", groupRoutes);
@@ -37,7 +36,7 @@ mongoose
     .then(() => {
         console.log("MongoDB connected successfully");
 
-        app.listen(5000, () => {
+        app.listen(process.env.PORT || 5000 , () => {
             console.log("Server running on http://localhost:5000");
         });
     })
