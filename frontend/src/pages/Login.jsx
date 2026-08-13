@@ -41,7 +41,7 @@ const Login = () => {
 
             const response =
                 await API.post(
-                    "/auth/login",
+                    "/api/auth/login",
                     {
                         email: email.trim(),
                         password
